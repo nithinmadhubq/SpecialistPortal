@@ -212,7 +212,7 @@ public class ScheduleTest extends AppointmentsTest{
 	@Test(priority=43)//, dependsOnMethods={"Selectingdate"})
 	public void Selectingreset() throws InterruptedException
 	{
-		String data="Thu, Jul 3rd";
+		String data="Fri, Jul 3rd";
 		while(true)
 		{
 			String Lists=driver.findElement(By.xpath("//div[@id='day_wise_schedules']/div[1]/div[2]")).getText();
