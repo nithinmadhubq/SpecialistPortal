@@ -49,9 +49,9 @@ public class PatientsTest extends ScheduleTest
 		Thread.sleep(3000);
 		robot.keyPress(KeyEvent.VK_F4);
 		Thread.sleep(4000);
-		robot.keyPress(KeyEvent.VK_ALT);
+		robot.keyRelease(KeyEvent.VK_ALT);
 		Thread.sleep(3000);
-		robot.keyPress(KeyEvent.VK_F4);
+		robot.keyRelease(KeyEvent.VK_F4);
 	}
 
 	@Test(priority=50)//, dependsOnMethods={"Mail"})
