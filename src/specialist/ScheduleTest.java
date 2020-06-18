@@ -7,16 +7,18 @@ import org.testng.annotations.Test;
 public class ScheduleTest extends AppointmentsTest{
 
 	@Test(priority=28)//, dependsOnMethods={"NavigateBack"})
-	public void ScheduleNavigation() throws InterruptedException 
+	public void scheduleNavigation() throws InterruptedException 
 	{
+		//Navigating to Schedule Page
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[@class='left-panel']/ul[1]/a[3]/li")).click();
 		Thread.sleep(5000);
 	}
 
-	@Test(priority=29)//, dependsOnMethods={"ScheduleNavigation"})
-	public void ScheduleInformation() throws InterruptedException
+	@Test(priority=29)//, dependsOnMethods={"scheduleNavigation"})
+	public void scheduleInformation() throws InterruptedException
 	{
+		//Opens up an Pop-up window
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[@class='side-head-sec margin-t30']/h2/a/i")).click();
 		Thread.sleep(7000);
@@ -24,9 +26,10 @@ public class ScheduleTest extends AppointmentsTest{
 		Thread.sleep(5000);
 	}
 
-	@Test(priority=30)//, dependsOnMethods={"ScheduleInformation"})
-	public void Monday() throws InterruptedException
+	@Test(priority=30)//, dependsOnMethods={"scheduleInformation"})
+	public void mondaySchedule() throws InterruptedException
 	{
+		//Scheduled time for Monday
 		Thread.sleep(5000);
 		Select Start_Morngsession=new Select(driver.findElement(By.xpath("//select[@id='morning_start_1']")));
 		Start_Morngsession.selectByIndex(3);
@@ -41,9 +44,10 @@ public class ScheduleTest extends AppointmentsTest{
 		End_Evngsession.selectByIndex(15);
 	}
 
-	@Test(priority=31)// dependsOnMethods={"Monday"})
-	public void Tuesday() throws InterruptedException
+	@Test(priority=31)// dependsOnMethods={"mondaySchedule"})
+	public void tuesdaySchedule() throws InterruptedException
 	{
+		//Scheduled time for Tuesday
 		Thread.sleep(5000);
 		Select Start_Morngsession=new Select(driver.findElement(By.xpath("//select[@id='morning_start_2']")));
 		Start_Morngsession.selectByIndex(3);
@@ -58,9 +62,10 @@ public class ScheduleTest extends AppointmentsTest{
 		End_Evngsession.selectByIndex(15);
 	}
 
-	@Test(priority=32)//, dependsOnMethods={"Tuesday"})
-	public void Wednesday() throws InterruptedException
+	@Test(priority=32)//, dependsOnMethods={"tuesdaySchedule"})
+	public void wednesdaySchedule() throws InterruptedException
 	{
+		//Scheduled time for Wednesday
 		Thread.sleep(5000);
 		Select Start_Morngsession=new Select(driver.findElement(By.xpath("//select[@id='morning_start_3']")));
 		Start_Morngsession.selectByIndex(3);
@@ -75,9 +80,10 @@ public class ScheduleTest extends AppointmentsTest{
 		End_Evngsession.selectByIndex(15);
 	}
 
-	@Test(priority=33)//, dependsOnMethods={"Wednesday"})
-	public void Thursday() throws InterruptedException
+	@Test(priority=33)//, dependsOnMethods={"wednesdaySchedule"})
+	public void thursdaySchedule() throws InterruptedException
 	{
+		//Scheduled time for Thursday
 		Thread.sleep(5000);
 		Select Start_Morngsession=new Select(driver.findElement(By.xpath("//select[@id='morning_start_4']")));
 		Start_Morngsession.selectByIndex(3);
@@ -92,9 +98,10 @@ public class ScheduleTest extends AppointmentsTest{
 		End_Evngsession.selectByIndex(15);
 	}
 
-	@Test(priority=34)//, dependsOnMethods={"Thursday"})
-	public void Friday() throws InterruptedException
+	@Test(priority=34)//, dependsOnMethods={"thursdaySchedule"})
+	public void fridaySchedule() throws InterruptedException
 	{
+		//Scheduled time for Friday
 		Thread.sleep(5000);
 		Select Start_Morngsession=new Select(driver.findElement(By.xpath("//select[@id='morning_start_5']")));
 		Start_Morngsession.selectByIndex(3);
@@ -109,9 +116,10 @@ public class ScheduleTest extends AppointmentsTest{
 		End_Evngsession.selectByIndex(15);
 	}
 
-	@Test(priority=35)//, dependsOnMethods={"Friday"})
-	public void Saturday() throws InterruptedException
+	@Test(priority=35)//, dependsOnMethods={"fridaySchedule"})
+	public void saturdaySchedule() throws InterruptedException
 	{
+		//Scheduled time for Saturday
 		Thread.sleep(5000);
 		Select Start_Morngsession=new Select(driver.findElement(By.xpath("//select[@id='morning_start_6']")));
 		Start_Morngsession.selectByIndex(3);
@@ -126,38 +134,43 @@ public class ScheduleTest extends AppointmentsTest{
 		End_Evngsession.selectByIndex(15);
 	}
 
-	@Test(priority=36)//, dependsOnMethods={"Saturday"})
-	public void Sunday() throws InterruptedException
+	@Test(priority=36)//, dependsOnMethods={"saturdaySchedule"})
+	public void sundaySchedule() throws InterruptedException
 	{
+		//Scheduled time for Sunday
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//tr[@id='tr_7']/td[4]/button")).click();
 	}
 
-	@Test(priority=37)//, dependsOnMethods={"Sunday"})
-	public void cancel() throws InterruptedException 
+	@Test(priority=37)//, dependsOnMethods={"sundaySchedule"})
+	public void cancelSchedule() throws InterruptedException 
 	{
+		//cancel the Schedule
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[@class='schedule-btn-group justify-content-center']/button[1]")).click();
 	}
 
-	@Test(priority=38)//, dependsOnMethods={"cancel"})
-	public void submit() throws InterruptedException 
+	@Test(priority=38)//, dependsOnMethods={"cancelSchedule"})
+	public void saveSchedule() throws InterruptedException 
 	{
+		//Save the data
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[@class='schedule-btn-group justify-content-center']/button[2]")).click();
 	}
 
-	@Test(priority=39)//, dependsOnMethods={"submit"})
-	public void AccessElite() throws InterruptedException
+	@Test(priority=39)//, dependsOnMethods={"saveSchedule"})
+	public void accessElite() throws InterruptedException
 	{
+		//Navigate to accessElite
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[@class='main-content']/div[2]/ul/li[2]")).click();
 		Thread.sleep(5000);
 	}
 
-	@Test(priority=40)//, dependsNoMethods={"AccessElite"})
-	public void WeeklyView() throws InterruptedException 
+	@Test(priority=40)//, dependsNoMethods={"accessElite"})
+	public void weeklyView() throws InterruptedException 
 	{
+		//Weekly Schedule
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[@id='schedule-subtab1']/div/div/div/table/tbody/tr/td[2]/table/tbody/tr[1]/td/span/a[1]")).click();
 		Thread.sleep(3000);
@@ -175,17 +188,19 @@ public class ScheduleTest extends AppointmentsTest{
 		Thread.sleep(3000);	
 	}
 
-	@Test(priority=41)//, dependsOnMethods={"WeeklyView"})
-	public void MontlyView() throws InterruptedException 
+	@Test(priority=41)//, dependsOnMethods={"weeklyView"})
+	public void monthlyView() throws InterruptedException 
 	{
+		//Monthly Schedule
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//ul[@class='nav nav-tabs appointment-tabs tabs-2 appointment-subtabs']/li[2]")).click();
 		Thread.sleep(3000);
 	}
 
-	@Test(priority=42)//, dependsOnMethods={"MontlyView"})
-	public void Selectingdate() throws InterruptedException
+	@Test(priority=42)//, dependsOnMethods={"monthlyView"})
+	public void selectingDate() throws InterruptedException
 	{
+		//Clicking on a day for special hours
 		Thread.sleep(5000);
 		String month="July";
 		String year="2020";
@@ -209,9 +224,10 @@ public class ScheduleTest extends AppointmentsTest{
 		Thread.sleep(5000);
 	}
 
-	@Test(priority=43)//, dependsOnMethods={"Selectingdate"})
-	public void Selectingreset() throws InterruptedException
-	{
+	@Test(priority=43)//, dependsOnMethods={"selectingDate"})
+	public void resetData() throws InterruptedException
+	{ 
+		//Reseting hourly availability for AccessElite patients
 		String data="Fri, Jul 3rd";
 		while(true)
 		{
@@ -249,9 +265,10 @@ public class ScheduleTest extends AppointmentsTest{
 		driver.findElement(By.xpath("//div[@class='modal-footer justify-content-center']/button[1]")).click();
 	}
 
-	@Test(priority=44)//, dependsOnMethods={"Selectingdate"})
-	public void Selectingsubmit() throws InterruptedException
+	@Test(priority=44)//, dependsOnMethods={"resetData"})
+	public void submitData() throws InterruptedException
 	{
+		//Selecting hourly availability for AccessElite patients
 		Thread.sleep(4000);
 		Select Start_Morngsession=new Select(driver.findElement(By.xpath("//select[@id='morning_start']")));
 		Start_Morngsession.selectByIndex(3);
@@ -275,11 +292,11 @@ public class ScheduleTest extends AppointmentsTest{
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//div[@class='modal-footer justify-content-center']/button[2]")).click();
 	}
-	@Test(priority=45)//, dependsOnMethods={"Selectingdate"})
-	public void scheduleback() throws InterruptedException
+	@Test(priority=45)//, dependsOnMethods={"submitData"})
+	public void scheduleBack() throws InterruptedException
 	{
+		//Navigating back to Schedule page
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//div[@class='left-panel']/ul[1]/a[3]/li")).click();
 	}
-
 }
