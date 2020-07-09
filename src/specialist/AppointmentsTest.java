@@ -1,4 +1,4 @@
-package specialist;
+package src.Specialistportal;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -29,7 +29,7 @@ public class AppointmentsTest extends OverTest
 		//the entry gets deleted
 		driver.findElement(By.xpath("//tr[@id='row_2417']/td[7]/button")).click();
 		Thread.sleep(5000);
-		//driver.findElement(By.xpath("//button[@id='cancel_appointment']")).click();
+		driver.findElement(By.xpath("//button[@id='cancel_appointment']")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[@id='cancel_appointment_model']/div/div/button")).click();
 		Thread.sleep(5000);
@@ -61,4 +61,3 @@ public class AppointmentsTest extends OverTest
 		Thread.sleep(5000);
 	}
 }
-
