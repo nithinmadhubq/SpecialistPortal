@@ -134,6 +134,15 @@ public class StaffdataTest extends AccountTest
 	}
 	
 	@Test(priority=93)
+	public void logout() throws InterruptedException
+	{
+	        //logout
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("//div[@class='left-panel']/ul[2]/a[2]/li")).click();
+		Thread.sleep(4000);
+	}
+	
+	@Test(priority=94)
 	public void quit() throws InterruptedException
 	{
 		//Closing the browser
